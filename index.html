@@ -8,35 +8,64 @@
   
   <title>Frontend Mentor | Intro component with sign up form</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <!-- Styling -->
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+  <div id="container">
+    <!-- Left column -->
+    <div id="leftColumn">
+      <title id="pageTitle">
+        Learn to code by watching others
+      </title>
 
-  Learn to code by watching others
+      <p id="pageDescription">
+        See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable. 
+      </p>
+    </div>
 
-  See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
-  but understanding how developers think is invaluable. 
+    <!-- Right column -->
+    <div id="rightColumn">
+      <!-- Pricing popup-->
+      <div id="pricingMessage">
+        <p id="pricingText">
+          <span class="bold">Try it free 7 days</span> then $20/mo. thereafter
+        </p>
+      </div>
 
-  Try it free 7 days then $20/mo. thereafter
+      <!-- Signup section -->
+      <div id="signupSection">
+        <!-- First name input -->
+        <input id="inputFirstName" class="inputField" type="text" placeholder="First Name">
 
-  First Name 
-  Last Name 
-  Email Address
-  Password
+        <!-- Last name input -->
+        <input id="inputLastName" class="inputField" type="text" placeholder="Last Name">
 
-  Claim your free trial 
+        <!-- Email input -->
+        <input id="inputEmail" class="inputField" type="email" placeholder="Email Address">
 
-  By clicking the button, you are agreeing to our Terms and Services
-  
+        <!-- Password input -->
+        <input id="inputPassword" class="inputField" type="password" placeholder="Password">
+
+        <!-- CTA button -->
+        <button id="CTAButton" onclick="signup()">
+          CLAIM YOUR FREE TRIAL
+        </button>
+
+        <!-- Signup disclaimer -->
+        <p id="signupDisclaimer">
+          By clicking the button, you are agreeing to our <a id="termsLink" href="#">Terms and Services</a>
+        </p>
+      </div>
+    </div>
+  </div>
   <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="#">Johannes Idarsson</a>.
     </p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
