@@ -1,5 +1,238 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    color: #FFF;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+/* Container that holds the background */
+#container {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: hsl(0, 100%, 74%);
+    background-image: url(images/bg-intro-mobile.png);
+    background-position: center;
+    overflow: auto;
+}
+
+#placementContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+#leftColumn, #rightColumn {
+    padding: 30px;
+    max-width: 400px;
+    margin: auto;
+}
+
+/* Left column styling */
+#leftColumn {
+    padding-top: 100px;
+    padding-bottom: 0;
+}
+
+#pageTitle {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Right column styling */
+#rightColumn {
+    max-width: 400px;
+    margin: auto;
+}
+
+/* Pricing message */
+#pricingMessage {
+    background-color: hsl(248, 32%, 49%);
+    padding: 15px 50px;
+    border-radius: 6px;
+
+    /* Shadows */
+    -webkit-box-shadow: 0px 6px 0px 0px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px 6px 0px 0px rgba(0,0,0,0.15);
+    box-shadow: 0px 6px 0px 0px rgba(0,0,0,0.15);
+}
+
+#pricingText {
+    margin: 0;
+}
+
+/* Signup section */
+#signupSection {
+    background-color: #FEFEFE;
+    border-radius: 6px;
+    margin-top: 20px;
+    padding: 20px;
+
+    /* Shadows */
+    -webkit-box-shadow: 0px 6px 0px 0px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px 6px 0px 0px rgba(0,0,0,0.15);
+    box-shadow: 0px 6px 0px 0px rgba(0,0,0,0.15);
+}
+
+/* Input styling */
+.inputDiv {
+    text-align: right;
+    margin-top: 15px;
+    position: relative;
+}
+
+.inputDiv:first-of-type {
+    margin-top: 0;
+}
+
+.inputField {
+    width: calc(100% - 42px);
+    padding: 15px 20px;
+    border: 1px solid hsl(246, 25%, 77%);
+    border-radius: 6px;
+    font-weight: 600;
+    transition: 0.2s;
+    color: hsl(249, 10%, 26%);
+}
+
+.inputField:focus {
+    outline: none;
+    border-color: hsl(248, 32%, 49%);
+    color: #000;
+}
 
 
+
+
+/* Input error styling */
+.inputErrorIcon {
+    display: none;
+    position: absolute;
+    top: 13px;
+    right: 20px;
+    height: 20px;
+    transition: 0.2s;
+    opacity: 0;
+}
+
+.inputErrorMessage {
+    margin: 0;
+    font-style: italic;
+    font-size: 12px;
+    font-weight: 500;
+    color: hsl(0, 100%, 74%);
+    height: 0;
+    opacity: 0;
+}
+
+.inputError > .inputField {
+    border-color: hsl(0, 100%, 74%);
+}
+
+.inputError > .inputErrorIcon {
+    display: block;
+    opacity: 1;
+}
+
+.inputError > .inputErrorMessage {
+    height: unset;
+    opacity: 1;
+}
+
+/* CTA button styling */
+#CTAButton {
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: hsl(154, 59%, 51%);
+    color: #FFF;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+
+    /* Shadows */
+    -webkit-box-shadow: 0px 4px 0px 0px rgba(49,186,127,1);
+    -moz-box-shadow: 0px 4px 0px 0px rgba(49,186,127,1);
+    box-shadow: 0px 4px 0px 0px rgba(49,186,127,1);
+}
+
+#CTAButton:hover, #CTAButton:focus {
+    background-color: #77e2b4;
+    outline: none;
+}
+
+#CTAButton:active {
+    transform: translateY(4px);
+    box-shadow: unset;
+}
+
+/* Signup disclaimer styling */
+#signupDisclaimer {
+    color: hsl(246, 25%, 77%);
+    font-size: 12px;
+    padding: 0 10px;
+    margin-bottom: 0;
+}
+
+#termsLink {
+    text-decoration: none;
+    color: hsl(0, 100%, 74%);
+    font-weight: 600;
+}
+
+/* Responsiveness */
+@media(min-width: 800px) {
+    #container {
+        background-image: url(images/bg-intro-desktop.png);
+        background-repeat: no-repeat;
+    }
+}
+
+@media(min-width: 1000px) {
+    #leftColumn, #rightColumn {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    #leftColumn {
+        padding: 30px;
+        text-align: left;
+        max-width: 500px;
+    }
+
+    #pageTitle {
+        font-size: 40px;
+    }
+
+    #rightColumn {
+        max-width: 440px;
+    }
+
+    #signupSection {
+        padding: 40px;
+    }
+
+    #pricingMessage {
+        padding: 15px;
+    }
+
+    footer {
+        margin-top: 10vh;
+    }
+}
 
 /* Attribution styling */
 .attribution { font-size: 11px; text-align: center; }
